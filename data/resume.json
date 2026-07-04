@@ -1,0 +1,214 @@
+{
+  "basics": {
+    "name": "Ahmad Hatahet",
+    "title": "Data Engineer",
+    "phone": "+49 174 494 8638",
+    "location": "Clausthal-Zellerfeld, Germany",
+    "status": "Married",
+    "nationality": "German",
+    "photo": "assets/images/photo.png",
+    "profiles": {
+      "linkedin": "https://www.linkedin.com/in/REPLACE_ME",
+      "github": "https://github.com/REPLACE_ME"
+    },
+    "summary": "Data engineer with 5+ years and master in computer science transforming messy data into reliable pipelines, dashboards, and agentic AI workflows, across the automotive, telecom, and logistic sectors. Comfortable end-to-end: from SQL/NoSQL data modeling and ETL/ELT development to Python/Cloud-based automation and production LLM integration. What drives me is understanding what a business actually needs and building something usable around it, in cross-functional and collaboration teams who will rely on it."
+  },
+  "experience": [
+    {
+      "title": "Artificial Intelligence Researcher",
+      "company": "Technical University Clausthal",
+      "location": "Clausthal-Zellerfeld, Germany",
+      "start": "Jan 2024",
+      "end": "Present",
+      "bullets": [
+        "Gather client requirements and advise on the best-fit technical approach based on business needs and constraints.",
+        "Conduct in-depth analysis of each project's scope, data, and technical constraints before implementation begins.",
+        "Evaluate and discuss alternative solution strategies with stakeholders to align technical direction with business goals.",
+        "Run ad-hoc experiments to weigh the cost and benefit of candidate approaches before committing to one.",
+        "Architect and implement scalable solutions end-to-end using agile methodology, from prototype to production.",
+        "Develop custom toolsets (scripts, MCP servers, APIs) to automate client workflows and reduce manual effort.",
+        "Customize AI knowledge bases and fine-tune/train models (incl. reinforcement learning) for domain-specific tasks.",
+        "Track and evaluate state-of-the-art deep learning and multimodal LLM techniques to inform tooling decisions."
+      ]
+    },
+    {
+      "title": "Data Scientist",
+      "company": "STI Consulting GmbH",
+      "location": "Munich, Germany",
+      "start": "Jan 2023",
+      "end": "Dec 2023",
+      "bullets": [
+        "Owned the \"Performance Tracker\" project for Telefónica, measuring company performance per second spent by each agent.",
+        "Delivered a range of calculations requested by financial advisors through a Power BI dashboard for company stakeholders.",
+        "Engineered data pipelines from multiple sources into a SQL Server database using SSIS (SQL Server Integration Services).",
+        "Designed long-lasting, automated solutions for data challenges.",
+        "Monitored report performance and readability to ensure the dashboard remained reliable for stakeholders.",
+        "Document all functionality and data model."
+      ]
+    },
+    {
+      "title": "Freelance Business Analyst",
+      "company": "Master QuickBooks Ireland Ltd.",
+      "location": "Dublin, Ireland",
+      "start": "Dec 2019",
+      "end": "Dec 2020",
+      "bullets": [
+        "Designed custom, automated Power BI and Excel reports for stakeholders using Power Query, DAX, and OLAP functionality."
+      ]
+    },
+    {
+      "title": "Business Analyst",
+      "company": "Waritex & InnoApps Software Development",
+      "location": "Cairo, Egypt",
+      "start": "Jul 2017",
+      "end": "Feb 2019",
+      "bullets": [
+        "Automated data pipelines and transformation to ensure data was clean and analysis-ready.",
+        "Designed dashboards to stakeholders on business stability, product performance, and expected shipments updates.",
+        "Led cost analyses for financial investment decisions and developed KPIs and automated reports for HR and other departments.",
+        "Built supporting models — e.g., an employee-wage estimation model and a product-reorder system factoring seasonal sales, stock, and shipping constraints."
+      ]
+    },
+    {
+      "title": "Product Support",
+      "company": "InnoApps Software Development",
+      "location": "Cairo, Egypt",
+      "start": "Feb 2017",
+      "end": "Jan 2018",
+      "bullets": [
+        "Planned and assigned tasks to developer teams under Agile methodology and coordinated fixes with them directly.",
+        "Provided remote support for server configuration and resolved client tickets end-to-end.",
+        "Documented tasks and recurring issues for the wider support team and for future reference."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI Assistant for a Monolithic Legacy Code Base",
+      "company": "AVL List GmbH",
+      "start": "08/2025",
+      "end": "08/2026",
+      "description": "Analyzed a 25-year-old critical automation system's codebase and built AI agent solutions to automate system understanding and modernization-strategy.",
+      "tech": "LLM, Microsoft Agent Framework, MCP, GraphRAG, Docker, Python, C++, C#"
+    },
+    {
+      "title": "Automated System Testing for Train Planning System",
+      "company": "HaCon Ingenieurgesellschaft mbH",
+      "start": "06/2025",
+      "end": "10/2025",
+      "description": "Built an agentic pipeline to auto-generate, execute, and evaluate JavaScript test scripts from textual specifications adhering to their custom dependencies.",
+      "tech": "LLM, CrewAI, MCP, Jenkins, Docker, Python"
+    },
+    {
+      "title": "Automated Car System Test-Case Generation",
+      "company": "Volkswagen",
+      "start": "08/2024",
+      "end": "08/2025",
+      "description": "Generated structured test cases with correctly ordered actions from functional safety requirements, using VW's internal domain language on a many-to-many requirement mapping.",
+      "tech": "LLM, LoRA, Fine-Tuning, Prompt Engineering, BNF Grammar, Python"
+    },
+    {
+      "title": "Software Architecture Description from Source Code",
+      "company": "IAV GmbH",
+      "start": "10/2024",
+      "end": "12/2024",
+      "description": "Automated generation of architecture documentation directly from C++ source code, covering static and behavioral aspects as a proof of concept.",
+      "tech": "LLM, Prompt Engineering, Reverse Engineering, Enterprise Architect, Python"
+    },
+    {
+      "title": "Performance Tracker Dashboard",
+      "company": "Telefónica",
+      "start": "06/2023",
+      "end": "11/2023",
+      "description": "Automated a multi-source data pipeline and built a KPI dashboard tracking cost- and profitability-per-call-second across international call centers.",
+      "tech": "Power BI, DBMS, Power Query, MS Excel, Python"
+    }
+  ],
+  "personal_projects": {
+    "core_technologies": "Python, PyTorch, TensorFlow, Docker, FastAPI, OpenAI API, LangChain, LangGraph, RAG, LoRA, Streamlit, Power BI",
+    "entries": [
+      {
+        "title": "Advanced AI Hands-on",
+        "description": "LLM applications, GraphRAG, and database query agents for retrieval and fine-tuning tasks",
+        "link": "https://github.com/REPLACE_ME"
+      },
+      {
+        "title": "Deep Learning Lab",
+        "description": "Custom neural networks in PyTorch covering transfer learning, CNNs, and VAEs",
+        "link": "https://github.com/REPLACE_ME"
+      },
+      {
+        "title": "FastAPI & Docker CRUD",
+        "description": "Containerized backend with FastAPI and MariaDB, orchestrated via Docker",
+        "link": "https://github.com/REPLACE_ME"
+      },
+      {
+        "title": "Multilingual Transcription",
+        "description": "Real-time speech-to-text and summarization tool (Streamlit, OpenAI API) for EN/DE/AR",
+        "link": "https://github.com/REPLACE_ME"
+      },
+      {
+        "title": "Advanced Data Analytics",
+        "description": "Automated Power BI dashboards with API pagination, auth, and complex Power Query transforms",
+        "link": "https://github.com/REPLACE_ME"
+      }
+    ]
+  },
+  "skills": {
+    "Data Engineering & Cloud": [
+      "SQL/NoSQL, complex queries & data modeling",
+      "ETL/ELT pipeline design (SSIS) & data warehousing",
+      "Python & JavaScript for data workflow automation",
+      "Azure (Data Factory, Synapse) & AWS data services",
+      "PySpark, Databricks, Big Data & time series",
+      "Docker, CI/CD, Git / version control",
+      "Power BI, DAX, Power Query, dashboard design"
+    ],
+    "AI, Automation & Analysis": [
+      "LLM automation (OpenAI, Azure, Anthropic, vLLM)",
+      "Agentic pipelines (CrewAI, MS Agent Framework, n8n)",
+      "Retrieval-Augmented Generation (RAG) pipelines",
+      "Machine Learning, statistical modeling & EDA",
+      "Neural networks & deep learning (PyTorch, TensorFlow)",
+      "API development & task automation"
+    ]
+  },
+  "education": [
+    {
+      "degree": "Master's in Computer Science",
+      "school": "Technical University Clausthal",
+      "start": "2021",
+      "end": "2023"
+    },
+    {
+      "degree": "Bachelor's in Accounting and Finance",
+      "school": "Cairo University",
+      "start": "2013",
+      "end": "2017"
+    },
+    {
+      "degree": "Highschool (Science Track)",
+      "school": "Dar Alhikma",
+      "start": "2010",
+      "end": "2011"
+    }
+  ],
+  "certificates": [
+    { "year": "2026", "issuer": "Google", "name": "Google Cybersecurity Certificate" },
+    { "year": "2026", "issuer": "University of Pennsylvania", "name": "AI Strategy and Governance Certificate" },
+    { "year": "2025", "issuer": "Duke University", "name": "MLOps Platforms: Amazon SageMaker and Azure ML Certificate" },
+    { "year": "2024", "issuer": "DeepLearning.AI", "name": "AI-Powered Software and System Design Certificate" },
+    { "year": "2023", "issuer": "DeepLearning.AI", "name": "Generative AI with Large Language Models Certificate" },
+    { "year": "2022", "issuer": "DeepLearning.AI", "name": "Practical Data Science on the AWS Cloud Specialization Certificate" },
+    { "year": "2022", "issuer": "Microsoft", "name": "Data Warehousing with Microsoft Azure Synapse Analytics Certificate" },
+    { "year": "2022", "issuer": "Microsoft", "name": "Microsoft Azure for Data Engineering Certificate" },
+    { "year": "2021", "issuer": "Google", "name": "Google Data Analytics Professional Certificate" },
+    { "year": "2019", "issuer": "Microsoft", "name": "Analyzing and Visualizing Data with Power BI Certificate" }
+  ],
+  "certificates_note": "More in my LinkedIn Profile",
+  "languages": [
+    { "name": "German", "level": "Conversational" },
+    { "name": "English", "level": "Proficient" },
+    { "name": "Arabic", "level": "Native" }
+  ]
+}

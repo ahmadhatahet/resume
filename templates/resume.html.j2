@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ basics.name }} — {{ basics.title }}</title>
+<style>
+  :root {
+    --accent: #1f5c6e;
+    --text: #1a1a1a;
+    --muted: #444;
+    --rule: #1f5c6e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Calibri", "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+    line-height: 1.4;
+    font-size: 14.5px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+  .header img {
+    width: 110px;
+    height: 139px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .header-center {
+    flex: 1;
+    text-align: center;
+  }
+  .header-center h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: var(--text);
+  }
+  .header-center .role {
+    margin-top: 2px;
+    font-size: 16px;
+    color: var(--muted);
+  }
+  .header-right {
+    text-align: right;
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .header-right a { color: var(--accent); text-decoration: none; }
+  .header-right div { margin-bottom: 2px; }
+
+  section { margin-top: 22px; }
+  h2.section-title {
+    color: var(--accent);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 3px;
+    margin: 0 0 10px;
+  }
+
+  .summary { margin: 0; }
+
+  .entry { margin-bottom: 14px; }
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  .entry-head .dates { font-weight: bold; white-space: nowrap; }
+  .entry-sub {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  ul.bullets {
+    margin: 4px 0 0;
+    padding-left: 18px;
+  }
+  ul.bullets li { margin-bottom: 2px; }
+
+  .project-tech { color: var(--muted); font-size: 13px; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+  }
+  .skills-grid h3 {
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+  .skills-grid ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  table.plain {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table.plain td { padding: 2px 0; vertical-align: top; }
+  table.plain td.right { text-align: right; font-weight: bold; white-space: nowrap; }
+
+  .certificates-note {
+    text-align: center;
+    font-size: 12.5px;
+    font-weight: bold;
+    margin-top: 6px;
+  }
+
+  .languages { text-align: center; }
+  .languages span { margin: 0 6px; }
+
+  a { color: var(--accent); }
+
+  @media print {
+    body { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="{{ basics.photo }}" alt="{{ basics.name }}">
+    <div class="header-center">
+      <h1>{{ basics.name|upper }}</h1>
+      <div class="role">{{ basics.title }}</div>
+    </div>
+    <div class="header-right">
+      <div>{{ basics.phone }}</div>
+      <div>{{ basics.location }}</div>
+      <div><a href="{{ basics.profiles.linkedin }}">LinkedIn</a> | <a href="{{ basics.profiles.github }}">GitHub</a></div>
+      <div>Status: {{ basics.status }}</div>
+      <div>Nationality: {{ basics.nationality }}</div>
+    </div>
+  </div>
+
+  <section>
+    <h2 class="section-title">Summary</h2>
+    <p class="summary">{{ basics.summary }}</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Professional Experience</h2>
+    {% for job in experience %}
+    <div class="entry">
+      <div class="entry-head">
+        <span>{{ job.title }}</span>
+        <span class="dates">{{ job.start }} – {{ job.end }}</span>
+      </div>
+      <div class="entry-sub">
+        <span>{{ job.company }}</span>
+        <span>{{ job.location }}</span>
+      </div>
+      <ul class="bullets">
+        {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2 class="section-title">Key Industrial Projects</h2>
+    {% for p in projects %}
+    <div class="entry">
+      <div class="entry-head">
+        <span>{{ p.title }}</span>
+        <span class="dates">{{ p.start }} – {{ p.end }}</span>
+      </div>
+      <div class="entry-sub">
+        <span>{{ p.company }}</span>
+        <span></span>
+      </div>
+      <div>{{ p.description }} <span class="project-tech">Tech: {{ p.tech }}.</span></div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2 class="section-title">Personal Projects</h2>
+    <p><strong>Core technologies:</strong> {{ personal_projects.core_technologies }}.</p>
+    <ul class="bullets">
+      {% for item in personal_projects.entries %}
+      <li><strong>{{ item.title }}</strong> — {{ item.description }} – <a href="{{ item.link }}">link</a>.</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      {% for category, items in skills.items() %}
+      <div>
+        <h3>{{ category }}</h3>
+        <ul>
+          {% for s in items %}<li>{{ s }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Education</h2>
+    <table class="plain">
+      {% for e in education %}
+      <tr>
+        <td>{{ e.degree }}, {{ e.school }}</td>
+        <td class="right">{{ e.start }} – {{ e.end }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </section>
+
+  <section>
+    <h2 class="section-title">Certificates</h2>
+    <table class="plain">
+      {% for c in certificates %}
+      <tr>
+        <td>{{ c.year }}</td>
+        <td>{{ c.issuer }}</td>
+        <td>{{ c.name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <div class="certificates-note">{{ certificates_note }}</div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Languages</h2>
+    <div class="languages">
+      {% for l in languages %}<span>{{ l.name }} – {{ l.level }}</span>{% if not loop.last %}<span>|</span>{% endif %}{% endfor %}
+    </div>
+  </section>
+
+</body>
+</html>
